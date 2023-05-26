@@ -1,0 +1,38 @@
+{% extends "blog/base_2.html" %}
+
+{% block content %}
+<div class="container py-5" xmlns="http://www.w3.org/1999/html">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card mb-4 post-card">
+          <div class="card-body">
+            <img class="card-img-top img-fluid fixed-height mb-3" src="{{ object.author.userprofile.picture.url }}" alt="Author's Profile Picture">
+            <h2 class="card-title">{{ post.title }}</h2>
+
+              <p class="card-text mb-0">
+                Written by <a href="{% url 'user posts' object.author %}"><strong>{{ object.author }}</strong></a> on <em>{{ object.date_posted }}</em>
+              </p>
+            <p>
+
+            </p>
+
+            <div>
+              <p class="card-text">{{ object.content }}</p>
+            </div>
+
+          </div>
+          <div class="card-footer">
+            <div class="text-muted">
+              {% if object.author == user %}
+                <span>Want to make changes to this post? <a href="{% url 'post update' post.id %}">Update Post</a></span><br>
+              {% endif %}
+              {% if object.author == user %}
+                <span>Delete Post? <a href="{% url 'post delete' post.id %}">Yes</a></span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
