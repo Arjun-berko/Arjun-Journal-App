@@ -5,8 +5,10 @@ boto3==1.26.140
 botocore==1.29.140
 certifi==2023.5.7
 crispy-bootstrap5==0.7
+dj-database-url==2.0.0
 Django==4.1.6
 django-crispy-forms==2.0
+django-heroku==0.3.1
 django-storages==1.13.2
 exceptiongroup==1.1.1
 factory-boy==3.2.1
@@ -21,6 +23,8 @@ outcome==1.2.0
 packaging==23.1
 Pillow==9.4.0
 pluggy==1.0.0
+psycopg2==2.9.6
+psycopg2-binary==2.9.6
 PySocks==1.7.1
 pytest==7.3.1
 pytest-django==4.5.2
@@ -36,4 +40,5 @@ trio==0.22.0
 trio-websocket==0.10.2
 typing_extensions==4.5.0
 urllib3==1.26.16
+whitenoise==6.4.0
 wsproto==1.2.0
