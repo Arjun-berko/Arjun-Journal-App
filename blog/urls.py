@@ -9,3 +9,5 @@ urlpatterns=[path('about',views.about,name='about page'),
              path('postupdate/<int:pk>/',PostUpdateView.as_view(),name="post update"),
              path('post/new/',PostCreateView.as_view(),name="post create"),
              path('post/delete/<int:pk>/',PostDeleteView.as_view(),name="post delete")]
+
+# path('postlist',PostListView.as_view(),name="home page"),

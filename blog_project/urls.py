@@ -4,9 +4,11 @@ from users import views as users_views
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
+from blog import views as blog_views
 
 
 urlpatterns = [
+    path('',blog_views.PostListView.as_view(),name="home page"),
     path('admin/', admin.site.urls),
     path('blog/',include('blog.urls')),
     path('users/',include('users.urls')),
